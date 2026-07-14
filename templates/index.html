@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduGenie Dashboard</title>
+
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">
+        🎓 EduGenie
+    </div>
+
+    <div class="nav-user">
+
+        <img
+            id="profilePic"
+            src="https://via.placeholder.com/45"
+            class="profile-pic"
+        >
+
+        <span id="userName">
+            Welcome
+        </span>
+
+        <button onclick="logout()" class="logout-btn">
+            Logout
+        </button>
+
+    </div>
+
+</nav>
+
+<section class="hero">
+
+    <h1>Welcome to EduGenie 👋</h1>
+
+    <p>Your Personal AI Learning Assistant</p>
+
+</section>
+
+<div class="dashboard">
+
+    <a href="/ask-page" class="card">
+        <h2>🤖 Ask AI</h2>
+        <p>Ask any question and get instant answers.</p>
+    </a>
+
+    <a href="/explain-page" class="card">
+        <h2>📖 Explain Concepts</h2>
+        <p>Understand difficult concepts easily.</p>
+    </a>
+
+    <a href="/quiz-page" class="card">
+        <h2>📝 Quiz Generator</h2>
+        <p>Create quizzes from any topic.</p>
+    </a>
+
+    <a href="/summary-page" class="card">
+        <h2>📄 Notes Summarizer</h2>
+        <p>Convert lengthy notes into key points.</p>
+    </a>
+
+    <a href="/learn-page" class="card">
+        <h2>🎯 Learning Roadmap</h2>
+        <p>Generate a step-by-step learning plan.</p>
+    </a>
+
+</div>
+
+<script src="/static/js/auth.js"></script>
+
+<script>
+
+const name = localStorage.getItem("userName");
+const picture = localStorage.getItem("userPicture");
+
+if(name){
+    document.getElementById("userName").innerHTML = "Hi, " + name;
+}
+
+if(picture){
+    document.getElementById("profilePic").src = picture;
+}
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduGenie | Sign Up</title>
+
+    <link rel="stylesheet" href="/static/css/style.css">
+
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+</head>
+
+<body class="auth-body">
+
+<div class="auth-container">
+
+    <div class="auth-card">
+
+        <h1>🎓 EduGenie</h1>
+
+        <p>Create Your Account</p>
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Full Name">
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Email">
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Password">
+
+        <input
+            type="password"
+            id="confirmPassword"
+            placeholder="Confirm Password">
+
+        <button class="primary-btn" onclick="signupUser()">
+
+            Create Account
+
+        </button>
+
+        <div class="divider">
+            <span>OR</span>
+        </div>
+
+        <div
+            id="g_id_onload"
+            data-client_id="742738827779-9hsfnkkqet73ou58hadvvk770b30ag61.apps.googleusercontent.com"
+            data-callback="handleCredentialResponse">
+        </div>
+
+        <div
+            class="g_id_signin"
+            data-type="standard"
+            data-theme="filled_blue"
+            data-shape="pill"
+            data-size="large"
+            data-text="continue_with"
+            data-width="320">
+        </div>
+
+        <p class="bottom-text">
+
+            Already have an account?
+
+            <a href="/login">
+
+                Login
+
+            </a>
+
+        </p>
+
+    </div>
+
+</div>
+
+<script src="/static/js/auth.js"></script>
+
+<script>
+
+if(localStorage.getItem("userEmail")){
+
+    window.location.href="/dashboard";
+
+}
+
+</script>
+
+</body>
+
+</html>

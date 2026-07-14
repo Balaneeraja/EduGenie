@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ask AI | EduGenie</title>
+
+    <link rel="stylesheet" href="/static/css/style.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">
+
+        🎓 EduGenie
+
+    </div>
+
+    <div>
+
+        <a href="/dashboard" class="back-btn">
+
+            🏠 Dashboard
+
+        </a>
+
+    </div>
+
+</nav>
+
+<div class="container fade-in">
+
+    <h1>🤖 Ask AI</h1>
+
+    <p>
+        Ask any question and get an AI-powered answer.
+    </p>
+
+    <textarea
+
+        id="question"
+
+        placeholder="Example: Explain Artificial Intelligence in simple words."
+
+        rows="6">
+
+    </textarea>
+
+    <button onclick="askAI()">
+
+        🚀 Ask AI
+
+    </button>
+
+    <div id="loading" class="loader hidden"></div>
+
+    <div
+
+        id="result"
+
+        class="result-box hidden"
+
+        style="margin-top:30px;">
+
+    </div>
+
+</div>
+
+<script src="/static/js/script.js"></script>
+
+<script>
+
+document.getElementById("question").addEventListener("keydown",function(e){
+
+    if(e.key==="Enter" && !e.shiftKey){
+
+        e.preventDefault();
+
+        askAI();
+
+    }
+
+});
+
+</script>
+
+</body>
+
+</html>

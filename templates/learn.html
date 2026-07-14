@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Learning Roadmap | EduGenie</title>
+
+    <link rel="stylesheet" href="/static/css/style.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">
+
+        🎓 EduGenie
+
+    </div>
+
+    <div>
+
+        <a href="/dashboard" class="back-btn">
+
+            🏠 Dashboard
+
+        </a>
+
+    </div>
+
+</nav>
+
+<div class="container fade-in">
+
+    <h1>🎯 Learning Roadmap</h1>
+
+    <p>
+
+        Enter any skill or subject and receive a step-by-step learning roadmap.
+
+    </p>
+
+    <input
+        type="text"
+        id="topic"
+        placeholder="Example: Data Science, Python, Cyber Security">
+
+    <button onclick="generateRoadmap()">
+
+        🚀 Generate Roadmap
+
+    </button>
+
+    <div id="loading" class="loader hidden"></div>
+
+    <div
+        id="result"
+        class="result-box hidden"
+        style="margin-top:30px;">
+    </div>
+
+</div>
+
+<script src="/static/js/script.js"></script>
+
+<script>
+
+document.getElementById("topic").addEventListener("keydown",function(e){
+
+    if(e.key==="Enter"){
+
+        generateRoadmap();
+
+    }
+
+});
+
+</script>
+
+</body>
+
+</html>

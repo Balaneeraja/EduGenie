@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Explain Concepts | EduGenie</title>
+
+    <link rel="stylesheet" href="/static/css/style.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">
+        🎓 EduGenie
+    </div>
+
+    <div>
+        <a href="/dashboard" class="back-btn">
+            🏠 Dashboard
+        </a>
+    </div>
+
+</nav>
+
+<div class="container fade-in">
+
+    <h1>📖 Explain Concepts</h1>
+
+    <p>
+        Enter any topic and receive a well-structured explanation.
+    </p>
+
+    <input
+        type="text"
+        id="topic"
+        placeholder="Example: Machine Learning"
+    >
+
+    <button onclick="explainTopic()">
+        📚 Explain
+    </button>
+
+    <div id="loading" class="loader hidden"></div>
+
+    <div
+        id="result"
+        class="result-box hidden"
+        style="margin-top:30px;">
+    </div>
+
+</div>
+
+<script src="/static/js/script.js"></script>
+
+<script>
+
+document.getElementById("topic").addEventListener("keydown",function(e){
+
+    if(e.key==="Enter"){
+
+        explainTopic();
+
+    }
+
+});
+
+</script>
+
+</body>
+
+</html>
